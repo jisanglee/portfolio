@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GithubIcon from '@material-ui/icons/GitHub';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 function HomePage(props) {
     return (
         
@@ -23,6 +24,9 @@ function HomePage(props) {
                         </a>
                         <a href="https://twitter.com/newspatoy" className="icon i-twitter">
                             <TwitterIcon />
+                        </a>
+                        <a href="https://www.linkedin.com/in/jisanglee273/" className="icon i-linkedin">
+                                <LinkedInIcon />
                         </a>
                     </div>
                 </div>
@@ -70,8 +74,8 @@ const HomePageStyled = styled.header`
     }
     .i-facebook{
         &:hover{
-                color:white;
-                border:2px solid white;
+                color:blue;
+                border:2px solid blue;
             }
     }
     .i-github{
@@ -82,8 +86,14 @@ const HomePageStyled = styled.header`
     }
     .i-twitter{
         &:hover{
-                color:blue;
-                border:2px solid blue;
+                color:deepskyblue;
+                border:2px solid deepskyblue;
+            }
+    }
+    .i-linkedin{
+        &:hover{
+                color:springgreen;
+                border:2px solid springgreen;
             }
     }
 `;
