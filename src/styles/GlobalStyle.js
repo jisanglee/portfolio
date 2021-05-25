@@ -18,6 +18,7 @@ const GlobalStyled = createGlobalStyle`
     --scrollbar-bg-color:#383838;
     --scrollbar-thump-color:#6b6b6b;
     --scrollbar-track-color:#383838;
+    
 
 
 }
