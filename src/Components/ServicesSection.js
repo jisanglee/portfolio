@@ -35,10 +35,19 @@ function ServicesSection() {
 const ServicesSectionStyled = styled.section`
     .services{
     margin-top: 5rem;
-    display: flex;
-    justify-content: space-between;
-    .mid-card{
-        margin: 0 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:1rem;
+    @media screen and (max-width:1000px){
+        flex-direction :column ;
+    }
+    @media screen and (max-width:950px){
+        grid-template-columns: repeat(2,1fr);
+        flex-direction :column ;
+    }
+    @media screen and (max-width:650px){
+        grid-template-columns: repeat(1,1fr);
+        flex-direction :column ;
     }
     }   
 `;

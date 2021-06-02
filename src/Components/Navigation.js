@@ -61,6 +61,7 @@ const NavigationStyled = styled.nav`
         text-align: center;
         .active-class{
             background-color: var(--primary-color);
+            color: var(--white-color);
         }
         li{
             display: block;
@@ -75,6 +76,7 @@ const NavigationStyled = styled.nav`
                 letter-spacing: 1px;
                 &:hover{
                     cursor: pointer;
+                    color: var(--white-color);
                 }
                 &::before{
                     content: "";
@@ -85,7 +87,7 @@ const NavigationStyled = styled.nav`
                     height: 50%;
                     background-color: var(--primary-color);
                     transition:All 0.4s cubic-bezier(1,-0.15,.33,.86);
-                    z-index:3;
+                    z-index:-1;
                     opacity: 0.21;
                     transform-origin: right;
                 }

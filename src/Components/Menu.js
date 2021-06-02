@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Github from '@material-ui/icons/GitHub';
 import Pinterest from '@material-ui/icons/Pinterest';
+
 function Menu({menuItems}) {
     return (
         <MenuItemStyled>
@@ -33,12 +34,18 @@ function Menu({menuItems}) {
         </MenuItemStyled>
     );
 }
+
 const MenuItemStyled = styled.div`
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 2rem;
+    @media screen and (max-width:920px){
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media screen and (max-width:670px){
+        grid-template-columns: repeat(1,1fr);
+    }
     .grid-item{
-
         .portfolio-content{
             display: block;
             position: relative;
@@ -52,6 +59,7 @@ const MenuItemStyled = styled.div`
                 object-fit:cover;
             }
             ul{
+                display: flex;
                 position: absolute;
                 left: 50%;
                 top:40%;
@@ -71,6 +79,7 @@ const MenuItemStyled = styled.div`
                         transition: all .4s ease-in-out;
                         &:hover{
                             background-color: var(--primary-color);
+                            
                         }
                         a{
                             display: flex;
@@ -125,7 +134,7 @@ const MenuItemStyled = styled.div`
                 &::before{
                     height: calc(100% - 32%);
                     width: calc(100% - 4%);
-                    background-color: white;
+                    background-color: var(--white-color);
                     opacity: 0.9;
                     transform-origin: left;
                     

@@ -38,7 +38,7 @@ function ContactPage(props) {
                                 <label htmlFor="text-area">Enter your message*</label>
                                 <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
                             </div>
-                            <div className="form-field">
+                            <div className="form-field f-button">
                                 <PrimaryButton title={'Send Email'} />
                             </div>
                         </form>
@@ -74,9 +74,18 @@ const ContactPageStyled = styled.section`
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-column-gap: 2rem;
+        @media screen and (max-width:978px){
+            grid-template-columns: repeat(1,1fr);
+            .f-button{
+                margin-bottom:2rem;
+            }
+        }
         .right-content{
-            display:flex;
-            flex-direction:column;
+            display:grid;
+            grid-template-columns: repeat(1,1fr);
+            @media screen and (max-width:502px){
+                width: 70%;
+            }
         }
         .contact-title{
             h4{
@@ -87,6 +96,10 @@ const ContactPageStyled = styled.section`
         }
         .form{
             width: 100%;
+            @media screen and (max-width:502px){
+                width: 100%;
+            }
+    
             .form-field{
                 margin-top:2rem;
                 position: relative;

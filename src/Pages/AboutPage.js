@@ -19,7 +19,7 @@ function AboutPage(props) {
     );
 }
 const AboutStyled = styled.section`
-
+    
 `;
 
 export default AboutPage;

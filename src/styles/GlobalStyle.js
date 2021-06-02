@@ -99,6 +99,12 @@ const GlobalStyled = createGlobalStyle`
         color: var(--white-color);
         span{
             font-size:4rem;
+            @media screen and (max-width:502px){
+            font-size:3rem;
+        }
+        }
+        @media screen and (max-width:502px){
+            font-size:3rem;
         }
     }
     span{
@@ -119,7 +125,7 @@ const GlobalStyled = createGlobalStyle`
     .light-dark-mode{
     position: fixed;
     right: 0;
-    top: 10%;
+    top: 50%;
     background-color: var(--background-light-color-2);
     width: 6.5rem;
     height: 2.5rem;
@@ -134,6 +140,30 @@ const GlobalStyled = createGlobalStyle`
         color:var(--white-color);
         }
      }
+
+     //Nav Toggler{
+    .ham-burger-menu{
+        position: absolute;
+        right: 5%;
+        top: 3%;
+        display: none;
+        z-index: 15;
+        svg{
+            font-size: 3rem;
+        }
+    }
+    .nav-toggle{
+        transform: translateX(0);
+        z-index: 20;
+    }
+    //global media query
+    @media screen and (max-width:1200px){
+        .ham-burger-menu{
+            display: block;
+
+        }
+            
+    }
 `;
 
 export default GlobalStyled;

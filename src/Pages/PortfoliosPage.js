@@ -9,7 +9,9 @@ const allButtons = ['All',...new Set(portfolios.map(item=>item.category))]
 
 function PortfoliosPage(props) {
     const [menuItem, setMenuItems] = useState(portfolios);
-    const [button, setButtons] = useState(allButtons);
+    const [button] = useState(allButtons);
+    // const [button,setButtons] = useState(allButtons);
+
 
     const filter = (button) => {
         if (button === 'All') {
